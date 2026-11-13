@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS externo -->
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 
@@ -24,6 +24,7 @@
         <li><a href="#galeria">Galería</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
+      <button id="btn-tema" class="btn-tema" aria-label="Activar modo noche">🌙</button>
     </nav>
   </header>
 
@@ -56,32 +57,22 @@
       <!-- Contenido secundario relacionado a la sección Nosotros -->
       <aside>
         <h3>Dato curioso</h3>
-        <p>Se estima que cada año ingresan al mar más de 8 millones de toneladas de plástico.</p>
+        <p id="dato-curioso">Se estima que cada año ingresan al mar más de 8 millones de toneladas de plástico.</p>
       </aside>
     </section>
 
     <!-- Sección Cómo ayudar (Servicios) -->
     <section id="ayudar" class="contenedor">
       <h2>¿Cómo podés ayudar?</h2>
-      <div class="grilla-cards">
-        <article class="card">
-          <img src="img/plastico.jpg" alt="Personas con bolsas de basuras de playa">
-          <h3>Reducí el plástico</h3>
-          <p>Usá botellas y bolsas reutilizables para evitar que el plástico termine en el mar.</p>
-        </article>
+      <!-- Botones de filtro  -->
+      <div id="filtros" class="filtros"></div>
 
-        <article class="card">
-          <img src="img/playa-limpia.jpg" alt="Persona juntando basura en la playa">
-          <h3>No dejes basura</h3>
-          <p>Si vas a la playa, llevate tu basura y ayudá a mantenerla limpia.</p>
-        </article>
+      <!-- Contador de compromisos -->
+      <p id="contador-compromisos" class="contador"></p>
 
-        <article class="card">
-          <img src="img/difundir.jpg" alt="Grupo de personas conversando sobre el cuidado del mar">
-          <h3>Difundí la causa</h3>
-          <p>Contales a tus amigos y familia sobre la importancia de cuidar los océanos.</p>
-        </article>
-      </div>
+      <!-- Las cards se generan desde js/main.js -->
+      <div id="grilla-cards" class="grilla-cards"></div>
+
     </section>
 
     <!-- Sección Galería -->
@@ -93,6 +84,12 @@
         <img src="img/galeria-3.jpg" alt="Peces de colores nadando cerca de un arrecife">
         <img src="img/galeria-4.jpg" alt="Atardecer visto desde la playa">
       </div>
+    </section>
+
+    <!-- Sección Preguntas frecuentes  -->
+    <section id="faq" class="contenedor">
+      <h2>Preguntas frecuentes</h2>
+      <div id="lista-faq" class="lista-faq"></div>
     </section>
 
     <!-- Sección Contacto -->
@@ -113,6 +110,19 @@
     <p> 2026 Cuidemos el Mar. Trabajo práctico realizado con fines educativos.</p>
     <a href="#inicio" class="volver-arriba">Volver arriba ↑</a>
   </footer>
+
+  <!-- Modal de detalle -->
+  <div id="modal" class="modal">
+    <div class="modal-contenido">
+      <button id="modal-cerrar" class="modal-cerrar" aria-label="Cerrar">✕</button>
+      <img id="modal-imagen" src="" alt="">
+      <h3 id="modal-titulo"></h3>
+      <p id="modal-categoria" class="etiqueta"></p>
+      <p id="modal-detalle"></p>
+    </div>
+  </div>
+ <!-- CONEXION JS -->
+  <script src="js/main.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,546 @@
+/* UNIVERSALES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables de color */
+:root {
+  --azul-oscuro: #023047;
+  --azul-medio: #219ebc;
+  --celeste: #8ecae6;
+  --amarillo: #ffb703;
+  --blanco: #ffffff;
+  --gris-texto: #333333;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--gris-texto);
+  line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+  background-color: var(--azul-oscuro);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--blanco);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav ul a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+nav ul a:hover {
+  color: var(--amarillo);
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  height: 70vh;
+  min-height: 400px;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero .texto-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(2, 48, 71, 0.5);
+  color: var(--blanco);
+  padding: 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* seccion NOSOTROS */
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.seccion-nosotros {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.seccion-nosotros article {
+  flex: 2;
+}
+
+.seccion-nosotros aside {
+  flex: 1;
+  background-color: var(--celeste);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid var(--azul-medio);
+}
+
+.contenedor h2 {
+  color: var(--azul-oscuro);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.seccion-nosotros p {
+  margin-bottom: 1rem;
+}
+
+.seccion-nosotros aside h3 {
+  color: var(--azul-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+/* seccion AYUDAR */
+
+.grilla-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  flex: 1 1 280px;
+  background-color: var(--blanco);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  color: var(--azul-oscuro);
+  padding: 1rem 1rem 0.5rem;
+}
+
+.card p {
+  padding: 0 1rem 1.5rem;
+}
+
+/* seccion GALERIA */
+
+.grilla-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.grilla-galeria img {
+  flex: 1 1 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: opacity 0.2s;
+}
+
+.grilla-galeria img:hover {
+  opacity: 0.8;
+}
+
+/* seccion CONTACTO Y FOOTER */
+
+#contacto p {
+  margin-bottom: 0.8rem;
+}
+
+.boton {
+  display: inline-block;
+  background-color: var(--azul-medio);
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  margin: 0.5rem 0 1rem;
+  transition: background-color 0.2s;
+}
+
+.boton:hover {
+  background-color: var(--azul-oscuro);
+}
+
+#contacto a:not(.boton) {
+  color: var(--azul-medio);
+}
+
+footer {
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer a {
+  color: var(--celeste);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.volver-arriba {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+/* Filtros */
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.boton-filtro {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  background-color: var(--blanco);
+  color: var(--azul-oscuro);
+  border: 2px solid var(--azul-medio);
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.boton-filtro:hover,
+.boton-filtro.activo {
+  background-color: var(--azul-medio);
+  color: var(--blanco);
+}
+
+/* dimensiones fotos tachos */
+.card img[src="img/reciclar.jpg"] {
+  object-position: bottom;
+}
+/* MODAL  */
+
+.card {
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 48, 71, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal.abierto {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-contenido {
+  position: relative;
+  background-color: var(--blanco);
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+  transform: scale(0.9);
+  transition: transform 0.3s;
+}
+
+.modal.abierto .modal-contenido {
+  transform: scale(1);
+}
+
+.modal-contenido img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.modal-contenido img[src="img/reciclar.jpg"] {
+  object-position: bottom;
+}
+
+.modal-contenido h3 {
+  color: var(--azul-oscuro);
+  padding: 1rem 1.5rem 0.3rem;
+}
+
+.modal-contenido p {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.etiqueta {
+  display: inline-block;
+  margin: 0 1.5rem 0.8rem;
+  padding: 0.2rem 0.8rem !important;
+  background-color: var(--celeste);
+  color: var(--azul-oscuro);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background-color: var(--blanco);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.modal-cerrar:hover {
+  background-color: var(--amarillo);
+}
+
+/* MIS COMPROMISOS */
+
+.card {
+  position: relative;
+}
+
+.boton-estrella {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--azul-oscuro);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.boton-estrella:hover {
+  transform: scale(1.15);
+}
+
+.boton-estrella.marcada {
+  background-color: var(--amarillo);
+}
+
+.contador {
+  font-weight: 600;
+  color: var(--azul-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+/* MODO NOCHE */
+
+/* Botón del nav */
+.btn-tema {
+  background-color: transparent;
+  border: 2px solid var(--celeste);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-tema:hover {
+  transform: rotate(20deg);
+  background-color: var(--azul-medio);
+}
+
+/* Transición suave al cambiar de tema */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Colores en modo noche */
+body.modo-noche {
+  background-color: #192833;
+  color: #e0e6ea;
+}
+
+body.modo-noche .contenedor h2,
+body.modo-noche .card h3,
+body.modo-noche .contador,
+body.modo-noche .modal-contenido h3,
+body.modo-noche .seccion-nosotros aside h3 {
+  color: var(--celeste);
+}
+
+body.modo-noche .card,
+body.modo-noche .modal-contenido,
+body.modo-noche .seccion-nosotros aside {
+  background-color: #13293d;
+  border-color: #1f3b52;
+}
+
+body.modo-noche .seccion-nosotros a,
+body.modo-noche #contacto a:not(.boton) {
+  color: var(--celeste);
+}
+
+body.modo-noche .boton-filtro {
+  background-color: transparent;
+  color: var(--celeste);
+}
+
+body.modo-noche .boton-filtro:hover,
+body.modo-noche .boton-filtro.activo {
+  background-color: var(--azul-medio);
+  color: var(--blanco);
+}
+
+/* PREGUNTAS FRECUENTES  */
+
+.lista-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.faq-item {
+  border: 2px solid var(--celeste);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-pregunta {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  background-color: var(--blanco);
+  color: var(--azul-oscuro);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.faq-pregunta:hover {
+  background-color: var(--celeste);
+}
+
+.faq-icono {
+  font-size: 1.4rem;
+  color: var(--azul-medio);
+}
+
+.faq-respuesta {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-respuesta p {
+  padding: 0 1.2rem 1rem;
+}
+
+.faq-item.abierta .faq-respuesta {
+  max-height: 200px;
+}
+
+/* DATO CURIOSO (fundido) */
+
+#dato-curioso {
+  transition: opacity 0.5s;
+}
+
+#dato-curioso.oculto {
+  opacity: 0;
+}
+
+/* Modo noche para el FAQ */
+
+body.modo-noche .faq-item {
+  border-color: #1f3b52;
+}
+
+body.modo-noche .faq-pregunta {
+  background-color: #13293d;
+  color: var(--celeste);
+}
+
+body.modo-noche .faq-pregunta:hover {
+  background-color: #1f3b52;
+}
