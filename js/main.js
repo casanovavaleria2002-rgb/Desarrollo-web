@@ -92,9 +92,6 @@ const datosCuriosos = [
 
 
 // ----- DOM -----
-
-// Buscamos en el HTML la caja vacía donde van las cards
-
 const grillaCards = document.getElementById("grilla-cards");
 const contenedorFiltros = document.getElementById("filtros");
 
@@ -109,11 +106,10 @@ const botonTema = document.getElementById("btn-tema");
 const listaFaq = document.getElementById("lista-faq");
 const textoDatoCurioso = document.getElementById("dato-curioso");
 
-// Lista de ids de las acciones marcadas (se recupera del localStorage)
+// Lista de ids de las acciones marcadas)
 let compromisos = cargarCompromisos();
 
 // ----- FUNCIONES -----
-
 // Crea una card a partir de UNA acción del array
 function crearCard(accion) {
   // Creamos la etiqueta <article class="card">
@@ -296,8 +292,7 @@ function actualizarContador() {
   }
 }
 
-// MODO NOCHE
-
+// MODO NOCH
 function aplicarTema(tema) {
   if (tema === "noche") {
     document.body.classList.add("modo-noche");
@@ -324,8 +319,7 @@ function alternarTema() {
 // Evento: click en el botón de tema
 botonTema.addEventListener("click", alternarTema);
 
-// ----- PREGUNTAS FRECUENTES (ACORDEÓN) -----
-
+// ----- PREGUNTAS FRECUENTES  -----
 // Genera una pregunta desplegable por cada objeto del array
 function crearFaq() {
   preguntasFrecuentes.forEach(function (item) {
@@ -379,8 +373,7 @@ function alternarFaq(contenedor, boton) {
 }
 
 
-// ----- DATO CURIOSO CON TIMER -----
-
+// DATO CURIOSO
 let indiceDato = 0;
 
 // Muestra el siguiente dato con un efecto de fundido
@@ -399,7 +392,7 @@ function mostrarSiguienteDato() {
   }, 500);
 }
 
-// ----- INICIO -----
+//  INICIO 
 
 crearBotonesFiltro();
 filtrarPorCategoria("Todas");
